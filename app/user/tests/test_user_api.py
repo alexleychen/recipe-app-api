@@ -65,7 +65,7 @@ class PublicUserApiTests(TestCase):
             email=payload['email']
         ).exists()
         self.assertFalse(user_exists)
-    
+
     def test_create_token_for_user(self):
         """Test generates token for valid credentials"""
         user_details = {
@@ -131,7 +131,7 @@ class PrivateUserApiTests(TestCase):
             'email': self.user.email,
 
         })
-    
+
     def test_post_me_not_allowed(self):
         """"Test POST is not allowed for the me endpoint."""
         res = self.client.post(ME_URL, {})

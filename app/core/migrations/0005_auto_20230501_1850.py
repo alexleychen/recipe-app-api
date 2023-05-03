@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
+        migrations.AlterField(
             model_name='recipe',
             name='ingredients',
             field=models.ManyToManyField(to='core.Ingredient'),
